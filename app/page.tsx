@@ -11,7 +11,7 @@ export default function Home() {
           Informe tes amis de ce que tu vas ramener à la soirée !
         </p>
         <p className="text-sm text-slate-400">
-          (oui, tu n'y échappera plus maintenant)
+          (oui, tu n'y échapperas plus maintenant)
         </p>
       </div>
     </main>
