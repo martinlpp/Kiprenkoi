@@ -9,7 +9,7 @@ export default function Navbar() {
         {/* On affiche le logo situé dans /public/logo.png */}
         <Link href="/">
           <Image
-            src="/logoKiprenkoi.png"        // chemin vers le fichier (toujours depuis /public)
+            src="/LogoKiprenkoi.png"        // chemin vers le fichier (toujours depuis /public)
             alt="Logo du site"     // description pour l'accessibilité
             width={80}             // largeur de l'image
             height={80}            // hauteur de l'image
