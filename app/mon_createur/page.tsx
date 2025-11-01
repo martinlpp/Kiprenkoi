@@ -1,45 +1,65 @@
 import Link from "next/link";
-import Image from "next/image"; 
+import Image from "next/image";
 
-
-export default function mon_createur() {
+export default function MonCreateur() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gradient-to-b from-orange-50 to-slate-100">
+    <main className="min-h-screen flex items-center justify-center bg-gradient-to-b from-orange-50 to-slate-100 px-4 py-10">
+      <div className="flex flex-col items-center space-y-8 max-w-5xl w-full">
+        {/* Nom */}
+        <h1 className="text-3xl sm:text-4xl font-bold text-slate-700 text-center">
+          Martin Loup
+        </h1>
 
-      <div className="flex flex-col items-center space-y-6">
-        <div className="text-3xl font-bold text-slate-700">Martin Loup</div>
-        <div className="flex items-center space-x-8">
-            {/* On affiche le logo situé dans /public/logo.png */}
-            <div className="text-stone-700 space-y-2">
-              <p className=" max-w-xs text-stone-700 text-lg">
-                Étudiant à l'ENSAE depuis 2025, je me forme seul au développement web via le projet KiprenKoi.</p>
-              <p className=" max-w-xs text-stone-700 text-lg">
-                À terme, j'envisage d'utiliser mes compétences en data science et machine learning dans des projets utiles
-                et innovants.  
-              </p>
-            </div>
+        {/* Bloc principal : image + textes */}
+        <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-between gap-8 sm:gap-12 w-full">
+          {/* Texte gauche */}
+          <div className="flex-1 text-stone-700 space-y-3 text-center sm:text-left">
+            <p className="text-base sm:text-lg leading-relaxed max-w-xs mx-auto sm:mx-0">
+              Étudiant à l&apos;ENSAE depuis 2025, je me forme seul au
+              développement web via le projet <span className="font-semibold">KiprenKoi</span>.
+            </p>
+            <p className="text-base sm:text-lg leading-relaxed max-w-xs mx-auto sm:mx-0">
+              À terme, j&apos;envisage d&apos;utiliser mes compétences en data
+              science et machine learning dans des projets utiles et innovants.
+            </p>
+          </div>
+
+          {/* Image au centre sur mobile */}
+          <div className="flex-shrink-0">
             <Image
-                src="/Martin.jpg"        // chemin vers le fichier (toujours depuis /public)
-                alt="Martin !"     // description pour l'accessibilité
-                width={500}             // largeur de l'image
-                height={500}            // hauteur de l'image
-                className="rounded-full" // arrondit les bords (optionnel)
+              src="/Martin.jpg"
+              alt="Martin !"
+              width={220}
+              height={220}
+              className="rounded-full shadow-md border-4 border-white sm:w-[260px] sm:h-[260px] object-cover"
             />
-            <div className="text-stone-700 space-y-2">
-            <p className="max-w-xs text-stone-700 text-lg">
-          KiprenKoi facilite l’organisation des soirées sans prise de tête. </p> 
-          <p className="max-w-xs text-stone-700 text-lg"> 
-            À partir d'un simple lien, 
-            les invités peuvent renseigner ce qu'ils choisissent d'apporter.</p> 
-          <p className="max-w-xs text-stone-700 text-lg">
-            Plusieurs fonctionnalités complémentaires permettrons aux organisateurs 
-          d'imposer des ratios alcools/nourriture/..., ou de partager les 
-          dépenses entre invités.</p>
-        
-            </div>
+          </div>
+
+          {/* Texte droite */}
+          <div className="flex-1 text-stone-700 space-y-3 text-center sm:text-left">
+            <p className="text-base sm:text-lg leading-relaxed max-w-xs mx-auto sm:mx-0">
+              <span className="font-semibold">KiprenKoi</span> facilite
+              l’organisation des soirées sans prise de tête.
+            </p>
+            <p className="text-base sm:text-lg leading-relaxed max-w-xs mx-auto sm:mx-0">
+              À partir d&apos;un simple lien, les invités peuvent renseigner ce
+              qu&apos;ils choisissent d&apos;apporter.
+            </p>
+            <p className="text-base sm:text-lg leading-relaxed max-w-xs mx-auto sm:mx-0">
+              Plusieurs fonctionnalités complémentaires permettront aux
+              organisateurs d&apos;équilibrer les apports ou de partager les
+              dépenses entre invités.
+            </p>
+          </div>
         </div>
 
-        {/* Nom du site à côté du logo */}
+        {/* Lien retour */}
+        <Link
+          href="/"
+          className="text-slate-600 text-sm underline hover:text-slate-900"
+        >
+          ← Retour à l&apos;accueil
+        </Link>
       </div>
     </main>
   );
