@@ -3,7 +3,8 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="bg-white shadow-sm py-4 px-8 flex justify-between items-center">
+    <nav className="bg-gradient-to-b from-orange-50 to-slate-50 py-4 px-8 flex justify-between items-center">
+
       {/* Bloc gauche : logo + titre du site */}
       <div className="flex items-center space-x-3">
         {/* On affiche le logo situé dans /public/logo.png */}
