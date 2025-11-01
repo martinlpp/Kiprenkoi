@@ -28,6 +28,9 @@ export default function Navbar() {
         <Link href="/about" className="text-slate-600 hover:text-blue-600 font-medium">
           À propos
         </Link>
+        <Link href="/mon_createur" className="text-slate-600 hover:text-blue-600 font-medium">
+          Mon créateur
+        </Link>
       </div>
     </nav>
   );
