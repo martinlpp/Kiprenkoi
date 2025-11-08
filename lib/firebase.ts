@@ -2,6 +2,9 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
+console.log("[FIREBASE] env projectId =", process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID);
+
+
 // Configuration Firebase (copie ce que Firebase t’a donné)
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
